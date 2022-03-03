@@ -7,10 +7,10 @@ type RecursiveListProps = {
   list: [ListProps, ...ListProps[]];
 };
 
-export const RecursiveList: VFC<RecursiveListProps> = (props) => {
+export const RecursiveList: VFC<RecursiveListProps> = ({ list }) => {
   return (
     <ul className="space-y-8">
-      {props.list.map((listItems, i) => {
+      {list.map((listItems, i) => {
         return (
           <li key={i}>
             <List {...listItems} />

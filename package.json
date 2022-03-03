@@ -35,12 +35,18 @@
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
     "@tailwindcss/typography": "^0.5.1",
+    "@trpc/client": "^9.20.1",
+    "@trpc/next": "^9.20.1",
+    "@trpc/react": "^9.20.1",
+    "@trpc/server": "^9.20.1",
     "next": "^12.0.10",
     "next-seo": "^5.1.0",
     "next-themes": "^0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hot-toast": "^2.2.0"
+    "react-hot-toast": "^2.2.0",
+    "react-query": "^3.34.16",
+    "zod": "^3.13.4"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
@@ -69,6 +75,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-storybook": "^0.5.7",
     "husky": ">=6",
     "jest": "^27.5.1",
     "jest-css-modules": "^2.1.0",

@@ -6,12 +6,12 @@ import type { VFC } from "react";
 import type { ListProps } from "./type";
 import { hasButton, isLink } from "./type";
 
-export const List: VFC<ListProps> = (props) => {
+export const List: VFC<ListProps> = ({ title, items }) => {
   return (
     <div className="space-y-1">
-      {props.title ? <div className="text-sm font-bold text-zinc-400">{props.title}</div> : null}
+      {title ? <div className="text-sm font-bold text-zinc-400">{title}</div> : null}
       <ul>
-        {props.items.map((item, i) => {
+        {items.map((item, i) => {
           const className = clsx(
             "flex justify-between items-center py-3 px-4 -mx-4 text-lg font-bold",
             {

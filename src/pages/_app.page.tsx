@@ -9,8 +9,8 @@ import { Toaster } from "react-hot-toast";
 import { useAddClassToBodyElem } from "./_app/useAddClassToBodyElem";
 import { useSessionRouter } from "./_app/useSessionRouter";
 
-const App = (props: AppProps) => {
-  useSessionRouter(props.router.asPath);
+const App = ({ Component, pageProps, router }: AppProps) => {
+  useSessionRouter(router.asPath);
   useAddClassToBodyElem("dark:bg-zinc-800 dark:text-white");
 
   return (
@@ -56,7 +56,7 @@ const App = (props: AppProps) => {
       //   ],
       // }}
       />
-      <props.Component {...props.pageProps} />
+      <Component {...pageProps} />
       <Toaster
         toastOptions={{
           className: "!rounded-full !py-1 !px-2.5 !text-sm font-bold",

@@ -3,6 +3,7 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: { project: "./tsconfig.json" },
   extends: [
+    "plugin:storybook/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
     "next/core-web-vitals",
@@ -18,7 +19,7 @@ module.exports = {
     "prefer-arrow-callback": "error",
     "prefer-const": "error",
     "func-style": ["error", "expression"],
-    "arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: true }],
+    "arrow-body-style": ["error", "always"],
     "no-restricted-imports": ["error", { paths: [{ name: "react", importNames: ["default"] }] }],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
@@ -61,17 +62,9 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["src/pages/**/*.tsx", "src/pages/api/**/*.ts"],
+      files: ["src/pages/**/*.page.tsx", "src/pages/api/**/*.page.ts"],
       rules: {
         "import/no-default-export": "off",
-        "@typescript-eslint/naming-convention": [
-          {
-            selector: "variable",
-            types: ["boolean"],
-            format: ["PascalCase"],
-            prefix: ["is", "has", "should"],
-          },
-        ],
       },
     },
   ],
